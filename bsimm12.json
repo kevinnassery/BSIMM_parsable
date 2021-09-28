@@ -1,4 +1,3 @@
-/Users/knassery
 [
     {
         "practice": "SM",
@@ -976,4 +975,4 @@
         "name": "Streamline incoming responsible vulnerability disclosure.",
         "description": "The SSG provides external bug reporters with a line of communication to internal security experts through a low- friction, public entry point. These experts work with bug reporters to invoke any necessary organizational responses and coordinate with the external entities throughout the defect management lifecycle. Successful disclosure processes require insight from internal stakeholders such as legal, marketing, and public relations roles to simplify and expedite the decision-making during software security crises. Although bug bounties may be important to motivate some researchers (see [CMVM3.4] Operate a bug bounty program), proper public attribution and a low- friction reporting process is often sufficient motivation for researchers to participate in a coordinated disclosure. Most organizations will use a combination of easy-to-find landing pages, common email addresses (security@), and embedded product documentation when appropriate (security.txt) as an entry point for external reporters to invoke this process."
     }
-]None
+]
