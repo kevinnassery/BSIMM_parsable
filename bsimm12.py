@@ -23,7 +23,16 @@ for line in lines:
         'description': description
     }
     activities.append(record)
-# print(activities)
+
+# json
 file = open('bsimm12.json', 'w')
 json.dump(activities, file, ensure_ascii=False, indent=4)
+file.close()
+
+# pipe seperated values
+tsv = f'practice|level|number|earth|name|description\n'
+for x in activities:
+    tsv += f'{x["practice"]}|{x["level"]}|{x["number"]}|{x["earth"]}|{x["name"]}|{x["description"]}\n'
+file = open('bsimm12.psv', 'w')
+file.write(tsv)
 file.close()
