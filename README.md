@@ -8,6 +8,7 @@ This is a small project to provide machine parseable BSIMM (Building Security in
 |------|--------|
 | bsimm12.py   | This parses the data into JSON. |
 | bsimm12.json | This is the JSON representation.| 
+| bsimm12.psv  | This is a Pipe delimited file (suitable for excel import)|
 
 * Note currently the only frequency data included for activity popularity is the BSIMM 'All Firms' aka 'Earth' data.
 
