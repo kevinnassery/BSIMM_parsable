@@ -16,9 +16,7 @@ This is a small project to provide machine parseable BSIMM (Building Security in
 
 The project is operated by [Synopsys](http://www.synopsys.com). The BSIMMv12 was authored by Sammy Migues, Eli Erlikhman, Jacob Ewers, and Kevin Nassery(me).
 
-I am no longer an employee of Synopsys, and this leveraged no work product developed under my previous employment with Synopsys.
-
-I am no longer an employee of Synopsys, and this leveraged no work product developed under my previous employment with Synopsys.
+I am no longer an employee of Synopsys, and this project contains no work product developed under my previous employment with Synopsys.
 
 This small effort, similarly is relased under [CCL 3.0](https://creativecommons.org/licenses/by-sa/3.0/) via ShareAlike.
 
