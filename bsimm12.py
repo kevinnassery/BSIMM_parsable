@@ -6,6 +6,7 @@ file = open('activities.txt')
 lines = file.readlines()
 activities = []
 
+
 def build_vert(filename='BSIMM12-vert.txt'):
     fileh = open(filename)
     rows = fileh.readlines()
