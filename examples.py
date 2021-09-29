@@ -34,6 +34,7 @@ def get_by_pr(db, pr):
     return result
 
 
+#  this does not process vertical %'s automatically, earth's v12 count is 128
 def percent_normalize(alist, vertical='earth', firmCount=128):
     total = 0
     for activity in alist:
