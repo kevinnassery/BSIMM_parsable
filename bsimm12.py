@@ -6,15 +6,43 @@ file = open('activities.txt')
 lines = file.readlines()
 activities = []
 
-# splicing in vert tables from PDF
-file = open('BSIMM12-vert.txt')
-vertlist = file.readlines()
-file.close()
-index = 0
+def build_vert(filename='BSIMM12-vert.txt'):
+    fileh = open(filename)
+    rows = fileh.readlines()
+    fileh.close()
+    results = []
+    for row in rows:
+        fields = row.rstrip().split(' ')
+        result = {
+            'id': fields[0][1:-1],
+            'isv': fields[1],
+            'fin': fields[2],
+            'tech': fields[3],
+            'cloud': fields[4],
+            'fintech': fields[5],
+            'iot': fields[6],
+            'healthcare': fields[7],
+            'insurance': fields[8],
+            'retail': fields[9]
+        }
+        print(result)
+        results.append(result)
+    return results
+
+
+def vlookup(id):
+    print(id)
+    db = build_vert()
+    for record in db:
+        if (record["id"] == id):
+            return record
+    return None
+
+
 for line in lines:
-    v = vertlist[index].rstrip().split(' ')
-    v.pop(0)  # removing id from this list, they are ordered the same
     fields = line.split('%')
+    v = vlookup(fields[1])
+    # print(v)
     id = fields[1].split('.')
     practice = id[0][:-1]
     number = id[1]
@@ -29,15 +57,15 @@ for line in lines:
         'name': name,
         'description': description,
         'earth': earth,
-        'isv': v[0],
-        'fin': v[1],
-        'tech': v[2],
-        'cloud': v[3],
-        'fintech': v[4],
-        'iot': v[5],
-        'healthcare': v[6],
-        'insurance': v[7],
-        'retail': v[8]
+        'isv': v['isv'],
+        'fin': v['fin'],
+        'tech': v['tech'],
+        'cloud': v['cloud'],
+        'fintech': v['fintech'],
+        'iot': v['iot'],
+        'healthcare': v['healthcare'],
+        'insurance': v['insurance'],
+        'retail': v['retail']
     }
     activities.append(record)
 
