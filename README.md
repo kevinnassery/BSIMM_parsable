@@ -1,4 +1,4 @@
-# BSIMM 12 Parseable Outputs
+# BSIMM 12 Parsable Outputs
 
 This is a small project to provide machine parseable BSIMM (Building Security in Maturity Model) version 12 framework data (in JSON format).
 
