@@ -1,0 +1,24 @@
+# BSIMM v14 Appendix 
+
+## BSIMM Activities
+|   id   | name            |
+|--------| ----------------|
+{% for x in bsimmdata %}
+| [{{ x["practice"] }}{{ x["level"] }}.{{ x["number"] }}]({{ mdl(x) }}) | {{ x["name"] }} |
+{% endfor %}
+
+## Appendices
+
+### Appendix A. BSIMM Activity Detail
+
+{% for x in bsimmdata %}
+#### {{ x["practice"] }}.{{ x["level"] }}.{{ x["number"]}} {{ x["name"] }}
+*{{ x["description"] }}*
+
+| vertical | incidence |
+|-----|-------|
+{% for key,value in occ(x).items() %}
+| {{ key }} | {{ value }} |
+{% endfor %}
+ 
+{% endfor %}
